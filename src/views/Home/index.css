@@ -1,0 +1,23 @@
+:root {
+    --cols: 3;
+}
+
+html {
+    background: black;
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.games-list {
+    display: grid;
+    margin: 50px 0;
+    grid-template-columns: repeat(auto-fit, minmax(Max(calc(100% / var(--cols, 1)), 350px), 1fr));
+}
