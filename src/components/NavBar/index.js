@@ -20,7 +20,8 @@ export default function NavBar () {
                 transform: 'rotate(90deg)'
             })
             setNavbarItemsStyle({
-                display: 'flex',
+                height: '200px',
+                opacity: '1',
             })
             setShow(true)
         } else {
@@ -28,7 +29,8 @@ export default function NavBar () {
                 transform: 'rotate(0deg)'
             })
             setNavbarItemsStyle({
-                display: 'none',
+                height: '0px',
+                opacity: 0,
             })
             setShow(false)
         }

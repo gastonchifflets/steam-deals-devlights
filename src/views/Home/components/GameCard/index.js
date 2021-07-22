@@ -5,11 +5,13 @@ import starIcon from '@iconify-icons/bi/star';
 
 import './index.css';
 import { DealsSelectedContext } from '../../../../App';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 
 // shows the details of a game deal
 
 export default function GameCard({ game }) {
+
+    const [gameAddedStyle, setGameAddedStyle] = useState({});
 
     const context = useContext(DealsSelectedContext);
     const { dealsSelected, setDealsSelected } = context;
@@ -33,10 +35,23 @@ export default function GameCard({ game }) {
     // add the game to the list of DealsSelected for showing in Cart
     const handleClick = () => {
         setDealsSelected([game, ...dealsSelected])
+        setGameAddedStyle({
+            height: '100%',
+            opacity: '1'
+        })
+        setTimeout(() => {
+            setGameAddedStyle({
+                height: '0px',
+                opacity: '0'
+            })
+        }, 2000)
     }
 
     return (
         <div className='card'>
+            <div className='game-added' style={gameAddedStyle}>
+                <span>Deal added to cart.</span>
+            </div>
             <div className='card-header'>
                 <div className='game-discount'>
                     <span>{discount}% off</span>
