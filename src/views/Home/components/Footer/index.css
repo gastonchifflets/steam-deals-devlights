@@ -14,6 +14,27 @@ footer {
     top: 0px;
 }
 
+@media (max-width: 1121px) {
+    footer {
+        flex-direction: column;
+    }
+    .footer-img {
+        left: 0;
+    }
+    .footer-items {
+        margin-top: 20px!important;
+    }
+}
+
+@media (max-width: 971px) {
+    .footer-items {
+        flex-direction: column;
+    }
+    .footer-items li {
+        margin-top: 5px!important;
+    }
+}
+
 .footer-items {
     position: relative;
     top: 50%;

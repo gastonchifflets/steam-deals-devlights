@@ -15,7 +15,7 @@ export default function Filter({ list, setGames }) {
     const handleFocus = () => {
         setStyle({
             ...style,
-            transform: 'scale(1.2)',
+            transform: 'scale(1.1)',
         })
     }
 
@@ -36,7 +36,7 @@ export default function Filter({ list, setGames }) {
         <div className='search-box' style={style}>
             <input 
             type='text' 
-            placeholder='Search...' 
+            placeholder='Search by title' 
             value={title} 
             onChange={(e) => handleSearch(e.target.value)}
             onFocus={() => handleFocus()}

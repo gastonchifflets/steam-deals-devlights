@@ -10,12 +10,14 @@ import { DealsSelectedContext } from '../../App';
 
 const customStyles = {
     overlay: {
+        zIndex: '2',
         backgroundColor: 'rgba(255, 255, 255, 0.3)',
     },
     content: {
         backgroundColor: 'black',
         color: 'white',
-        width: '500px',
+        maxWidth: '500px',
+        width: '90%',
         top: '50%',
         left: '50%',
         right: 'auto',

@@ -16,6 +16,12 @@ html {
     height: auto;
 }
 
+@media (max-width: 700px) {
+    .hero {
+        margin-top: 180px;
+    }
+}
+
 .games-list {
     display: grid;
     margin: 50px 0;

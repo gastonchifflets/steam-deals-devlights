@@ -1,7 +1,8 @@
 .search-box {
     display: flex;
     justify-content: center;
-    width: 450px;
+    max-width: 450px;
+    width: 90%;
     height: 30px;
     margin: 0 auto;
     border: solid 2px #ED1E79;
