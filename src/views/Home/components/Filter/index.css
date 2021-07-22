@@ -1,0 +1,31 @@
+.search-box {
+    display: flex;
+    justify-content: center;
+    width: 450px;
+    height: 30px;
+    margin: 0 auto;
+    border: solid 2px #ED1E79;
+    border-radius: 10px;
+    color: #ED1E79;
+    padding: 5px;
+    margin-top: 40px;
+}
+
+.search-box input {
+    background: black;
+    border: none;
+    width: 85%;
+    color: #ED1E79;
+    outline: none;
+    transition: all .3s ease,
+}
+
+.search-box input::placeholder {
+    color: #ED1E79;
+    font-size: 1.2rem;
+}
+
+.icon {
+    width: 30px;
+    height: auto;
+}
