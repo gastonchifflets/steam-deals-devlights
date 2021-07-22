@@ -7,6 +7,8 @@ import './index.css';
 import { DealsSelectedContext } from '../../../../App';
 import { useContext } from 'react';
 
+// shows the details of a game deal
+
 export default function GameCard({ game }) {
 
     const context = useContext(DealsSelectedContext);
@@ -16,6 +18,7 @@ export default function GameCard({ game }) {
     const discount = ((1 - game?.salePrice / game?.normalPrice) * 100).toFixed(0);
     const stars = [];
 
+    // determinate how many stars has the game
     while (stars.length !== 5) {
         if (score - 1 >= 0) {
             stars.push(<Icon  icon={starFill} />)
@@ -27,6 +30,7 @@ export default function GameCard({ game }) {
         score -= 1;
     }
 
+    // add the game to the list of DealsSelected for showing in Cart
     const handleClick = () => {
         setDealsSelected([game, ...dealsSelected])
     }

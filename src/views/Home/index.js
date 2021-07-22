@@ -42,9 +42,15 @@ export default function Home() {
             <main className='container'>
                 <Filter list={gamesList} setGames={setGames} />
                 <div className='games-list'>
-                    {isLoading ? <h2>Cargando...</h2> : games?.map((game) => <div key={game.deadID}>
-                                                                                <GameCard game={game} key={game.deadID} index={game.deadID}/>
-                                                                                </div>)}
+                    {isLoading ? 
+                        <h2 style={{
+                            color:'white',
+                            textAlign: 'center',
+                        }}>Loading...</h2> 
+                    : 
+                        games?.map((game) => <div key={game.deadID}>
+                                                <GameCard game={game} key={game.deadID}/>
+                                            </div>)}
                 </div>
             </main>
             <Footer />

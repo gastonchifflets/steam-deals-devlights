@@ -5,6 +5,8 @@ import searchFill from '@iconify-icons/eva/search-fill'
 
 import './index.css';
 
+// filter the games deals by title
+
 export default function Filter({ list, setGames }) {
 
     const [title, setTitle] = useState('');

@@ -28,6 +28,7 @@ const customStyles = {
     },
   };
 
+  // use a React Modal Library for showing the selected games deals
 
 export default function Cart() {
     const [show, setShow] = useState(false);
