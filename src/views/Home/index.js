@@ -5,6 +5,7 @@ import NavBar from "../../components/NavBar";
 import './index.css';
 import hero from '../../img/hero.jpg';
 import GameCard from "./components/GameCard";
+import Footer from "./components/Footer";
 
 export default function Home() {
 
@@ -16,6 +17,7 @@ export default function Home() {
             const response = await fetch('https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=15');
             const responseJSON = await response.json();
             setGames(responseJSON);
+            console.log(responseJSON)
             setIsLoading(false);
         } catch(e) {
             console.log(e);
@@ -36,11 +38,12 @@ export default function Home() {
             </div>
             <main className='container'>
                 <div className='games-list'>
-                    {isLoading ? <h2>Cargando...</h2> : games?.map((game, index) => <div key={index}>
-                                                                                <GameCard game={game} />
-                                                                            </div>)}
+                    {isLoading ? <h2>Cargando...</h2> : games?.map((game) => <div key={game.deadID}>
+                                                                                <GameCard game={game} key={game.deadID} index={game.deadID}/>
+                                                                                </div>)}
                 </div>
             </main>
+            <Footer />
         </>
     );
 }

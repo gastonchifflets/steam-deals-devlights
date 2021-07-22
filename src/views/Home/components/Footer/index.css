@@ -1,0 +1,32 @@
+footer {
+    background: #1A1A1A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 100px;
+}
+
+.footer-img {
+    position: relative;
+    width: 150px;
+    z-index: 2;
+    left: -100px;
+    top: 0px;
+}
+
+.footer-items {
+    position: relative;
+    top: 50%;
+    left: -5%;
+    list-style: none;
+    display: flex;
+    margin: 0;
+    color: white;
+}
+
+.footer-item {
+    margin-left: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
