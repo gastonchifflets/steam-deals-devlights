@@ -17,7 +17,7 @@ export default function GameCard({ game }) {
     const { dealsSelected, setDealsSelected } = context;
 
     let score = game?.steamRatingPercent / 20;
-    const discount = ((1 - game?.salePrice / game?.normalPrice) * 100).toFixed(0);
+    const discount = (Number(game?.savings)).toFixed(0);
     const stars = [];
 
     // determinate how many stars has the game
