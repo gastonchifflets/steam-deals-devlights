@@ -77,8 +77,8 @@ export default function Cart() {
             {dealsSelected.length === 0 ? 
                 <p>There's no deals selected.</p> 
             : 
-                dealsSelected.map(game => (
-                                            <div key={game.dealID}>
+                dealsSelected.map((game, index) => (
+                                            <div key={index}>
                                                 <p>{game.title}. ${game.salePrice}</p>
                                             </div>
                                             ))}
