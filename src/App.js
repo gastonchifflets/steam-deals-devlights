@@ -5,18 +5,28 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import { createContext, useState } from 'react';
 
 import Home from './views/Home';
+import Cart from './views/Cart';
+
+
+export const DealsSelectedContext = createContext();
+
 
 function App() {
+
+  const [dealsSelected, setDealsSelected] = useState([]);
+  
   return (
-    <Router>
-      <Switch>
-        <Route exact path='/' component={Home} />
-        {/* <Route exact path='/cart' component={Cart} />
-        <Route exact path='/rentals' component={Rentals} /> */}
-      </Switch>
-    </Router>
+    <DealsSelectedContext.Provider value={ {dealsSelected, setDealsSelected} }>
+      <Router>
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route path='/cart' component={Cart} />
+        </Switch>
+      </Router>
+    </DealsSelectedContext.Provider>
   );
 }
 

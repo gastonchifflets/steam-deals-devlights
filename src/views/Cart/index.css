@@ -1,0 +1,26 @@
+
+
+h2 {
+    margin: 0;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.close-icon {
+    color: red;
+    font-size: 2rem;
+}
+
+.close-icon:hover {
+    cursor: pointer;
+}
+
+.modal-content p,
+.total p {
+    margin: 20px 0;
+}

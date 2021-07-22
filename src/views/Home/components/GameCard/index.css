@@ -73,6 +73,7 @@ p {
     border-radius: 10px;
     height: 50px;
     background: linear-gradient(90deg, #ff9100ab 0%, #DC1D5F 51%, #84019A 100%);
+    cursor: pointer;
 }
 
 .normal-price {

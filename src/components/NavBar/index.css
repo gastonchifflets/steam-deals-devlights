@@ -24,6 +24,7 @@ nav {
 }
 
 .navbar-item {
+    display: block;
     text-decoration: none;
     color: white;
     font-size: 1.2rem;
@@ -37,6 +38,7 @@ nav {
 }
 
 .secondary {
+    background-color: transparent;
     color: #ED1E79;
     border: solid 1px #ED1E79;
     border-radius: 8px;
