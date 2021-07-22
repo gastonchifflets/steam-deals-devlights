@@ -48,9 +48,7 @@ export default function Home() {
                             textAlign: 'center',
                         }}>Loading...</h2> 
                     : 
-                        games?.map((game) => <div key={game.deadID}>
-                                                <GameCard game={game} key={game.deadID}/>
-                                            </div>)}
+                        games?.map((game) =><GameCard game={game} key={game.dealID}/>)}
                 </div>
             </main>
             <Footer />

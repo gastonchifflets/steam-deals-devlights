@@ -23,11 +23,11 @@ export default function GameCard({ game }) {
     // determinate how many stars has the game
     while (stars.length !== 5) {
         if (score - 1 >= 0) {
-            stars.push(<Icon  icon={starFill} />)
+            stars.push(<Icon key={stars.length} icon={starFill} />)
         } else if (score < 1 && score - 0.5 >= 0) {
-            stars.push(<Icon  icon={starHalf} />)
+            stars.push(<Icon key={stars.length} icon={starHalf} />)
         } else {
-            stars.push(<Icon  icon={starIcon} />)
+            stars.push(<Icon key={stars.length} icon={starIcon} />)
         }
         score -= 1;
     }

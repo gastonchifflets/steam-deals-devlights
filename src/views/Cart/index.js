@@ -39,7 +39,6 @@ export default function Cart() {
     const total = (dealsSelected?.reduce((acc, currValue) => acc + Number(currValue.salePrice), 0)).toFixed(2);
 
     function openModal() {
-        console.log(dealsSelected)
         setShow(true);
     }
 
@@ -79,9 +78,9 @@ export default function Cart() {
                 <p>There's no deals selected.</p> 
             : 
                 dealsSelected.map(game => (
-                                            <>
+                                            <div key={game.dealID}>
                                                 <p>{game.title}. ${game.salePrice}</p>
-                                            </>
+                                            </div>
                                             ))}
         </div>
         <div className='total'>
